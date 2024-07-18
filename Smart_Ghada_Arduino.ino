@@ -8,9 +8,7 @@
 #include <Servo.h> 
  
 Servo myservo;  // create servo object to control a servo 
-#define SERVO_PIN         4
-#define REFRESH_PERIOD_MS 20
-#define NOW               1
+#define SERVO_PIN    9
 #define IR 3
 
 int pos = 0;    // variable to store the servo position 
@@ -28,7 +26,7 @@ void loop()
   sense = digitalRead(IR);
   // check if object detected..
   if (sense == LOW) {
-    pos =180;
+    pos =0;
   }
   else{
     pos =70;
